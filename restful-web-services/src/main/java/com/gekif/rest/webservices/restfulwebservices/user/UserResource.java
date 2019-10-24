@@ -15,15 +15,24 @@ public class UserResource {
     @Autowired
     private UserDaoService service;
 
+
     @GetMapping("/users")
     public List<User> retrieveAllUsers() {
         return service.findAll();
     }
 
+
     @GetMapping("/users/{id}")
     public User retrieveUser(@PathVariable int id) {
-        return service.findOne(id);
+        User user = service.findOne(id);
+
+        if (user == null) {
+            throw new UserNotFoundException("id-" + id);
+        }
+
+        return user;
     }
+
 
     // input - details of user
     // output - CREATED & Return the created URI
