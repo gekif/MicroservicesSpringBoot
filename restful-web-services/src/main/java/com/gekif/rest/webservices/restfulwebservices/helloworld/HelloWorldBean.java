@@ -1,4 +1,4 @@
-package com.gekif.rest.webservices.restfulwebservices;
+package com.gekif.rest.webservices.restfulwebservices.helloworld;
 
 public class HelloWorldBean {
 
