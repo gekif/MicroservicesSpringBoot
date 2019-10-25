@@ -1,0 +1,3 @@
+INSERT INTO user VALUES (1, SYSDATE(), 'AB');
+INSERT INTO user VALUES (2, SYSDATE(), 'Jill');
+INSERT INTO user VALUES (3, SYSDATE(), 'Jam');
