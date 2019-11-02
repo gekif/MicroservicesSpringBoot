@@ -23,7 +23,7 @@ public class User {
         this.role = role;
     }
 
-    protected User() {
+    public User(String jack, String admin) {
     }
 
     @Override
