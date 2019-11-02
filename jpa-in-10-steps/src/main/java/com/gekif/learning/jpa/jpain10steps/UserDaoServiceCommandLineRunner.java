@@ -13,8 +13,12 @@ public class UserDaoServiceCommandLineRunner implements CommandLineRunner {
     private static final Logger log =
             (Logger) LoggerFactory.getLogger(UserDaoServiceCommandLineRunner.class);
 
+    private final UserDAOService userDAOService;
+
     @Autowired
-    private UserDAOService userDAOService;
+    public UserDaoServiceCommandLineRunner(UserDAOService userDAOService) {
+        this.userDAOService = userDAOService;
+    }
 
     @Override
     public void run(String... args) throws Exception {
